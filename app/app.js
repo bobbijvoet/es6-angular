@@ -18,6 +18,8 @@ angular.module('myApp').directive('starDirective', () => {
     restrict: 'A',
     controller: directiveCtrl.factory,
     controllerAs: 'starItemCtrl',
-    template: '<li>{{usr.id}}. {{usr.name}}</li>'
+    bindToController: true,
+    scope:{star:'='},
+    template: '<li>{{starItemCtrl.star.id}}. {{starItemCtrl.star.name}}</li>'
   }
 });

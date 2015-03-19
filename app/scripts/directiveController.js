@@ -2,7 +2,6 @@
 
 class DirectiveController {
   constructor() {
-    console.log('directive!');
     this.init();
   }
 

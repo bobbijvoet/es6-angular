@@ -8,6 +8,7 @@ class StarsController {
 
   init() {
     this.starsService.getUsers().then(users => {
+
       this.users = users;
     });
   }
