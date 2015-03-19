@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Babel Jspm</title>
+	<script src="jspm_packages/system.js"></script>
+	<script src="config.js"></script>
+	<script>
+		System.import('./app/app');
+		System.import('./jspm_packages/bower/bootstrap-material-design@0.3.0/dist/css/material.css!')
+	</script>
+</head>
+<body ng-app="myApp">
+<h1> My starred repos</h1>
+
+
+<div ng-controller="userCtrl as u">
+	<ul ng-repeat="usr in u.users">
+		<div star-directive=""></div>
+
+	</ul>
+</div>
+</body>
+</html>
