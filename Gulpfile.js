@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 
 // Html task
 gulp.task('html', function() {
-  gulp.src('*.html')
+  gulp.src('./app/*.html')
   .pipe(connect.reload());
 });
 
@@ -15,8 +15,7 @@ gulp.task('js', function() {
 
 // Watch our changes
 gulp.task('watch', function(){
-  //html
-  gulp.watch(['*.html'], ['html']);
+  gulp.watch(['./app/*.html'], ['html']);
   gulp.watch(['./app/*/**.js'], ['js']);
 });
 

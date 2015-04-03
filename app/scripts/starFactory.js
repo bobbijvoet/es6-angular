@@ -9,11 +9,11 @@ class StarFactory {
     return this.$http.get('https://api.github.com/users/bobbijvoet/starred').then(r => r.data);
   }
 
-  static factory($http) {
+  static instance($http) {
     return new StarFactory($http);
   }
 }
 
-StarFactory.factory.$inject = ['$http'];
+StarFactory.instance.$inject = ['$http'];
 
 export default StarFactory;

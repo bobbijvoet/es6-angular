@@ -9,7 +9,7 @@ class StarsController {
   init() {
     this.starsService.getUsers().then(users => {
 
-      this.users = users;
+      this.stars = users;
     });
   }
 }
