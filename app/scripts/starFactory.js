@@ -1,5 +1,8 @@
 'use strict';
 
+import myText from './class';
+
+
 class StarFactory {
   constructor($http) {
     this.$http = $http;
