@@ -7,11 +7,7 @@ class Main {
     this.template = main;
     this.bindToController = true;
     this.controller = mainController;
-    this.controllerAs = 'vm';
-  }
-
-  link() {
-    console.log('yeah im there');
+    this.controllerAs = 'mainCtrl';
   }
 
   static instance() {

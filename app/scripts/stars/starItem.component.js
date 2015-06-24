@@ -11,16 +11,10 @@ class StarItem {
     }
   }
 
-  link(scope, elem, attrs, ngModelController) {
-    console.log('yeah it got logged');
-
-  }
-
   static instance() {
     return new StarItem();
 
   }
 }
-
 
 export default StarItem;
