@@ -5,10 +5,10 @@ import profileService from './profile.service';
 class Profile {
   constructor() {
     this.restrict = 'E';
-    this.template = profile;
     this.bindToController = true;
     this.controller = profileController;
     this.controllerAs = 'vm';
+    this.template = profile;
   }
 
   static instance() {

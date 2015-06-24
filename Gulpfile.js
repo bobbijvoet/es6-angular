@@ -9,14 +9,14 @@ gulp.task('html', function () {
 
 //Js task
 gulp.task('js', function () {
-  gulp.src('./app/*/**.js')
+  gulp.src('./app/**/**.js')
     .pipe(connect.reload());
 });
 
 // Watch our changes
 gulp.task('watch', function () {
   gulp.watch(['./app/*.html'], ['html']);
-  gulp.watch(['./app/*/**.js'], ['js']);
+  gulp.watch(['./app/**/*.js'], ['js']);
 });
 
 gulp.task('connect', function () {
