@@ -2,8 +2,7 @@
 
 class MainController {
   constructor() {
-    this.state = '';
-    this.selectState('home');
+    this.state = 'home';
   }
 
   selectState(newState) {

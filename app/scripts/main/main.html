@@ -1,0 +1,18 @@
+
+
+<button ng-click="vm.selectState('home')">Home</button>
+<button ng-click="vm.selectState('profile')">Profile</button>
+<button ng-click="vm.selectState('stars')">Starred</button>
+
+<div ng-switch on="vm.state">
+	<div ng-switch-when="home">
+		Welcome to the github app.
+	</div>
+	<div ng-switch-when="profile">
+		<profile-component/>
+	</div>
+	<div ng-switch-when="stars">
+		<stars-component/>
+	</div>
+</div>
+

@@ -15,47 +15,7 @@
 <h1>Github app using ES6</h1>
 
 
-<div ng-controller="mainController as vm">
-
-	<button ng-click="vm.state = 'home'">Home</button>
-	<button ng-click="vm.state = 'profile'">Pr0file</button>
-	<button ng-click="vm.state = 'stars'">Starred</button>
-
-	<div ng-switch on="vm.state">
-		<div ng-switch-when="home">
-			home sweet home
-		</div>
-		<div ng-switch-when="profile">
-			hellll llyeaaafhhh
-		</div>
-		<div ng-switch-when="stars">
-			<stars-component/>
-
-		</div>
-	</div>
-
-
-</div>
-<div ng-controller="starsCtrl as vm">
-	<h1></h1>
-
-
-	<!--<div ng-repeat="star in vm.stars" class="list-group">-->
-	<!--<div class="list-group-item">-->
-	<!--<div class="row-action-primary">-->
-	<!--<i class="mdi-file-folder"></i>-->
-	<!--</div>-->
-	<!--<div class="row-content">-->
-	<!--<div class="least-content">{{star.stargazers_count}}</div>-->
-	<!--<h4 class="list-group-item-heading">{{star.name}}</h4>-->
-	<!--<p class="list-group-item-text">{{star.id}}</p>-->
-	<!--</div>-->
-	<!--<div class="list-group-separator"></div>-->
-	<!--</div>-->
-
-	<!--</div>-->
-</div>
-
+<main-component></main-component>
 
 </body>
 </html>

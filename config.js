@@ -1,6 +1,11 @@
 System.config({
   "baseURL": "/",
   "transpiler": "babel",
+  "babelOptions": {
+    "optional": [
+      "runtime"
+    ]
+  },
   "paths": {
     "*": "*.js",
     "bower:*": "jspm_packages/bower/*.js",
@@ -9,13 +14,15 @@ System.config({
   }
 });
 
-
 System.config({
   "map": {
-    "angular": "github:angular/bower-angular@1.3.15",
-    "angular-mocks": "github:angular/bower-angular-mocks@1.3.15",
+    "angular": "github:angular/bower-angular@1.4.0",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.4.0",
+    "babel": "npm:babel-core@5.6.4",
+    "babel-runtime": "npm:babel-runtime@5.6.4",
     "bootstrap": "bower:bootstrap@3.3.4",
     "bootstrap-material-design": "bower:bootstrap-material-design@0.3.0",
+    "core-js": "npm:core-js@0.9.18",
     "css": "github:systemjs/plugin-css@0.1.9",
     "proxy-middleware": "npm:proxy-middleware@0.11.0",
     "text": "github:systemjs/plugin-text@0.0.2",
@@ -79,6 +86,14 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
+    "npm:babel-runtime@5.6.4": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:buffer@3.1.2": {
+      "base64-js": "npm:base64-js@0.0.8",
+      "ieee754": "npm:ieee754@1.1.6",
+      "is-array": "npm:is-array@1.0.1"
+    },
     "npm:clean-css@3.1.8": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "commander": "npm:commander@2.6.0",
@@ -97,6 +112,11 @@ System.config({
       "events": "github:jspm/nodelibs-events@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:core-js@0.9.18": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:core-util-is@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"

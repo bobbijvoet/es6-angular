@@ -4,9 +4,9 @@ class StarItem {
   constructor() {
     this.restrict = 'E';
     this.template = starItem;
-    this.bindToController = true;
-
-    this.scope = {
+    this.controller = function(){}
+    this.controllerAs = 'ctrl';
+    this.bindToController = {
       'data':'='
     }
   }

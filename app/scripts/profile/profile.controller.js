@@ -7,7 +7,7 @@ class ProfileController {
   }
 
   init() {
-    this.profileService.getUsers().then(profile => {
+    this.profileService.getProfile().then(profile => {
 
       this.profile = profile;
     });

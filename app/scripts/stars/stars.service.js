@@ -1,15 +1,15 @@
 'use strict';
 
-class ProfileService {
+class StarsService {
   constructor($http) {
     this.$http = $http;
   }
 
-  getProfile() {
-    return this.$http.get('https://api.github.com/users/bobbijvoet').then(r => r.data);
+  getStars() {
+    return this.$http.get('https://api.github.com/users/bobbijvoet/starred').then(r => r.data);
   }
 }
 
-ProfileService.$inject = ['$http'];
+StarsService.$inject = ['$http'];
 
-export default ProfileService;
+export default StarsService;
