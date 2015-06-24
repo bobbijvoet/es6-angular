@@ -1,11 +1,18 @@
+//import angular from 'angular';
+
 var math = {
-  square: function(x) {
+  square(x) {
     return x * x;
   },
-  multiply: function (x, y) {
+  multiply(x, y) {
     return x * y;
   }
 };
+
+
+//angular.element('dov').on('click', (e) => {
+//  console.log(e);
+//});
 
 var integer = 123;
 

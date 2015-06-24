@@ -2,7 +2,7 @@ class Home {
   constructor() {
     this.restrict = 'E';
 
-    this.template = `I'm home bitches!`;
+    this.template = `I'm home`;
   }
 
   static instance() {
