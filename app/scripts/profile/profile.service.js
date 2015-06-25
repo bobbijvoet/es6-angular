@@ -10,8 +10,6 @@ class ProfileService {
 
       //Do someting with the data provide
       console.log(response.data);
-      console.log(this);
-      //Calc how long i'm member
       return response.data
     });
   }
