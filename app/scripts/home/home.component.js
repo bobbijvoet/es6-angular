@@ -1,8 +1,8 @@
 class Home {
   constructor() {
     this.restrict = 'E';
-
-    this.template = `I'm home`;
+    this.name = 'Bob';
+    this.template = `Dear ${this.name} This is the homepage`;
   }
 
   static instance() {

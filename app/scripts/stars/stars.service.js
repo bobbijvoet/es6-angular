@@ -6,7 +6,7 @@ class StarsService {
   }
 
   getStars() {
-    return this.$http.get('https://api.github.com/users/bobbijvoet/starred').then(r => r.data);
+    return this.$http.get('https://api.github.com/users/bobbijvoet/starred').then(response => response.data);
   }
 }
 
