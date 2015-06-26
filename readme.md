@@ -1,11 +1,15 @@
 #A demo of angular 1.x and ES6
 
 ##This app uses jspm as a package manager.
-###To install run:
-npm install -g jspm
-npm install -g jspm-bower-endpoint
-jspm endpoint create bower jspm-bower-endpoint
+###To install jspm run:
+`npm install -g jspm`
 
-###And use gulp to run it:
-gulp default
+
+###Install dependencies
+`npm install`
+
+`jspm install`
+
+##And use gulp to run it:
+`gulp default`
 
