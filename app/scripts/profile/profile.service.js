@@ -7,7 +7,7 @@ class ProfileService {
   }
 
   getProfile() {
-    return this.$http.get('https://api.github.com/users/bobbijvoet').then(function (response) {
+    return this.$http.get('https://api.github.com/users/bobbijvoet').then( (response) => {
       //Do someting with the data provide
       console.log(this.coolObject);
       console.log(response.data);
