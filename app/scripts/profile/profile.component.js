@@ -18,7 +18,6 @@ class Profile {
 
 angular.module('githubApp')
   .directive('profileComponent', Profile.instance)
-  .service('profileService', profileService)
-  .controller('profileCtrl', profileController);
+  .service('profileService', profileService);
 
 export default Profile;

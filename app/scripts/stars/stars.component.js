@@ -6,7 +6,7 @@ class StarsComponent {
   constructor() {
     this.restrict = 'E';
     this.template = starsTpl;
-    this.controller  = StarsCtrl;
+    this.controller = StarsCtrl;
     this.controllerAs = 'starsCtrl'
   }
 
@@ -16,7 +16,9 @@ class StarsComponent {
   }
 }
 
+angular.module('githubApp')
+  .directive('starsComponent', StarsComponent.instance)
+  .directive('starItem', starItem.instance)
+
 
 export default StarsComponent;
-
-

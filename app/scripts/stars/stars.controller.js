@@ -1,5 +1,9 @@
 'use strict';
 
+import starsService from './stars.service';
+
+angular.module('githubApp').service('starsService', starsService);
+
 
 class StarsController {
   constructor(starsService) {

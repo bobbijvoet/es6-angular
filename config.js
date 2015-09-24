@@ -1,45 +1,34 @@
 System.config({
-  "baseURL": "/",
-  "transpiler": "babel",
-  "babelOptions": {
+  baseURL: "/",
+  defaultJSExtensions: true,
+  transpiler: "babel",
+  babelOptions: {
     "optional": [
       "runtime"
     ]
   },
-  "paths": {
-    "*": "*.js",
-    "github:*": "jspm_packages/github/*.js",
-    "npm:*": "jspm_packages/npm/*.js"
-  }
-});
+  paths: {
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
+  },
 
-System.config({
-  "map": {
-    "FezVrasta/bootstrap-material-design": "github:FezVrasta/bootstrap-material-design@0.3.0",
+  map: {
     "angular": "github:angular/bower-angular@1.4.1",
     "angular-mocks": "github:angular/bower-angular-mocks@1.4.1",
-    "babel": "npm:babel-core@5.6.4",
-    "babel-runtime": "npm:babel-runtime@5.6.4",
+    "babel": "npm:babel-core@5.8.25",
+    "babel-runtime": "npm:babel-runtime@5.8.25",
     "bootstrap": "github:twbs/bootstrap@3.3.5/css/bootstrap.css",
-    "bootstrap-material-design": "github:FezVrasta/bootstrap-material-design@0.3.0/dist/css/material.css",
-    "core-js": "npm:core-js@0.9.18",
+    "core-js": "npm:core-js@1.1.4",
     "css": "github:systemjs/plugin-css@0.1.13",
     "proxy-middleware": "npm:proxy-middleware@0.11.0",
+    "systemjs": "npm:systemjs@0.19.3",
     "text": "github:systemjs/plugin-text@0.0.2",
     "twbs/bootstrap": "github:twbs/bootstrap@3.3.5",
-    "FezVrasta/bootstrap-material-design@0.3.0": {
-      "css": "github:systemjs/plugin-css@0.1.13",
-      "jquery": "github:components/jquery@2.1.4"
-    },
-    "github:FezVrasta/bootstrap-material-design@0.3.0": {
-      "css": "github:systemjs/plugin-css@0.1.13",
-      "jquery": "github:components/jquery@2.1.4"
-    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
     "github:jspm/nodelibs-buffer@0.1.0": {
-      "buffer": "npm:buffer@3.1.2"
+      "buffer": "npm:buffer@3.5.0"
     },
     "github:jspm/nodelibs-events@0.1.0": {
       "events-browserify": "npm:events-browserify@0.0.1"
@@ -76,21 +65,28 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:babel-runtime@5.6.4": {
+    "npm:babel-runtime@5.8.25": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:buffer@3.1.2": {
+    "npm:buffer@3.5.0": {
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.6",
       "is-array": "npm:is-array@1.0.1"
     },
-    "npm:core-js@0.9.18": {
+    "npm:core-js@1.1.4": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:core-util-is@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
+    },
+    "npm:es6-module-loader@0.17.8": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0",
+      "util": "github:jspm/nodelibs-util@0.1.0",
+      "when": "npm:when@3.7.3"
     },
     "npm:events-browserify@0.0.1": {
       "process": "github:jspm/nodelibs-process@0.1.1"
@@ -119,10 +115,8 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "isarray": "npm:isarray@0.0.1",
       "process": "github:jspm/nodelibs-process@0.1.1",
-      "stream": "github:jspm/nodelibs-stream@0.1.0",
       "stream-browserify": "npm:stream-browserify@1.0.0",
-      "string_decoder": "npm:string_decoder@0.10.31",
-      "util": "github:jspm/nodelibs-util@0.1.0"
+      "string_decoder": "npm:string_decoder@0.10.31"
     },
     "npm:stream-browserify@1.0.0": {
       "events": "github:jspm/nodelibs-events@0.1.0",
@@ -131,6 +125,14 @@ System.config({
     },
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
+    },
+    "npm:systemjs@0.19.3": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "es6-module-loader": "npm:es6-module-loader@0.17.8",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0",
+      "when": "npm:when@3.7.3"
     },
     "npm:url@0.10.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
@@ -141,7 +143,9 @@ System.config({
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:when@3.7.3": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     }
   }
 });
-
