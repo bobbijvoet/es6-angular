@@ -1,13 +1,15 @@
 import profile from './profile.html!text';
 import profileController from './profile.controller';
-import profileService from './profile.service';
 
 class Profile {
   constructor() {
     this.restrict = 'E';
-    this.bindToController = true;
+    this.scope = true;
+    this.bindToController = {
+      user: '='
+    };
     this.controller = profileController;
-    this.controllerAs = 'vm';
+    this.controllerAs = 'profileCtrl';
     this.template = profile;
   }
 
@@ -17,7 +19,6 @@ class Profile {
 }
 
 angular.module('githubApp')
-  .directive('profileComponent', Profile.instance)
-  .service('profileService', profileService);
+  .directive('profileComponent', Profile.instance);
 
 export default Profile;

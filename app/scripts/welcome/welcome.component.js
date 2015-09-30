@@ -1,8 +1,8 @@
+
 class Welcome {
   constructor() {
     this.restrict = 'E';
-    this.name = 'Bob';
-    this.template = `Welcome ${this.name}`;
+    this.templateUrl = 'scripts/welcome/welcome.html';
   }
 
   static instance() {
@@ -11,6 +11,6 @@ class Welcome {
 }
 
 angular.module('githubApp')
-  .directive('homeComponent', Welcome.instance);
+  .directive('welcomeComponent', Welcome.instance);
 
 export default Welcome;

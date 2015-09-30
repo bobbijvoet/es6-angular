@@ -3,10 +3,11 @@
 class StarsService {
   constructor($http) {
     this.$http = $http;
+    this.username = 'bobbijvoet';
   }
 
   getStars() {
-    return this.$http.get('https://api.github.com/users/bobbijvoet/starred').then(response => response.data);
+    return this.$http.get(`https://api.github.com/users/${this.username}/starred`).then(response => response.data);
   }
 }
 

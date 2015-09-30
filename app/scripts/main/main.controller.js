@@ -1,13 +1,18 @@
 'use strict';
 
 class MainController {
-  constructor() {
-    this.state = 'home';
+  constructor(userService) {
+    this.userService = userService;
+    this.user = {};
   }
 
-  selectState(newState) {
-    this.state = newState;
+  findUser(id) {
+    this.userService.getUser(id).then((user)=> {
+      this.user = user;
+    });
   }
 }
+
+MainController.$inject = ['userService'];
 
 export default MainController;
