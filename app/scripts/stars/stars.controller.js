@@ -1,24 +1,25 @@
 'use strict';
 
-import starsService from './stars.service';
-
-angular.module('githubApp').service('starsService', starsService);
 
 
 class StarsController {
-  constructor(starsService) {
+  constructor(starsService, $scope) {
     this.starsService = starsService;
-    this.init();
+
+    $scope.$watch('this.starsCtrl.username', (newValue)=> {
+      if(newValue) {
+        this.getStars();
+      }
+    })
   }
 
-  init() {
-    this.starsService.getStars().then(users => {
-
+  getStars() {
+    this.starsService.getStars(this.username).then(users => {
       this.stars = users;
     });
   }
 }
 
-StarsController.$inject = ['starsService'];
+StarsController.$inject = ['starsService', '$scope'];
 
 export default StarsController;

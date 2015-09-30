@@ -7,7 +7,10 @@ class UserService {
 
   getUser(id) {
     return this.$http.get('https://api.github.com/users/' + id).then((response) => {
-      return response.data
+
+      const {avatar_url:photo, login:username} = response.data;
+
+      return {photo, username};
     });
   }
 }

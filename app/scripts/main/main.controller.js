@@ -3,7 +3,6 @@
 class MainController {
   constructor(userService) {
     this.userService = userService;
-    this.user = {};
   }
 
   findUser(id) {
