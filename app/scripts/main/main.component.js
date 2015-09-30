@@ -1,6 +1,6 @@
-import './scripts/selectUser/selectUser.component.js';
-import './scripts/profile/profile.component';
-import './scripts/stars/stars.component';
+import './../selectUser/selectUser.component.js';
+import './../profile/profile.component';
+import './../stars/stars.component';
 
 import mainTemplate from './main.html!text';
 import mainController from './main.controller';
@@ -11,6 +11,7 @@ class Main {
   constructor() {
     this.restrict = 'E';
     this.template = mainTemplate;
+    this.scope = true;
     this.bindToController = true;
     this.controller = mainController;
     this.controllerAs = 'mainCtrl';

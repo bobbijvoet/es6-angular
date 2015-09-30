@@ -18,7 +18,7 @@ class StarsComponent {
 
 angular.module('githubApp')
   .directive('starsComponent', StarsComponent.instance)
-  .directive('starItem', starItem.instance)
+  .directive('starItem', starItem.instance);
 
 
 export default StarsComponent;

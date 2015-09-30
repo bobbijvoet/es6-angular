@@ -1,8 +1,15 @@
+import welcomeCtrl from './welcome.controller';
+import welcomeTpl from './welcome.html!text';
+
 
 class Welcome {
   constructor() {
     this.restrict = 'E';
-    this.templateUrl = 'scripts/welcome/welcome.html';
+    this.template = welcomeTpl;
+    this.scope = true;
+    this.controller = welcomeCtrl;
+    this.controllerAs = 'welcomeCtrl';
+    this.bindToController = true;
   }
 
   static instance() {
