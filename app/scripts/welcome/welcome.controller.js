@@ -1,11 +1,11 @@
 'use strict';
 
 class WelcomeController {
-  constructor($http) {
+  constructor() {
     this.name = 'Bob';
   }
 }
 
-WelcomeController.$inject = ['$http'];
+WelcomeController.$inject = [];
 
 export default WelcomeController;
