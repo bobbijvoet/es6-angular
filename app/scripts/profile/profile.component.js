@@ -6,7 +6,8 @@ class Profile {
     this.restrict = 'E';
     this.scope = true;
     this.bindToController = {
-      user: '='
+      photo: '=',
+      username:'='
     };
     this.controller = profileController;
     this.controllerAs = 'profileCtrl';

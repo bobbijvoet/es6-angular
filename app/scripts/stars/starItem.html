@@ -2,7 +2,8 @@
   <i class="mdi-action-star-rate "></i>
 </div>
 <div class="row-content">
-  <div class="least-content">{{star.stargazers_count}}</div>
   <h4 class="list-group-item-heading">{{star.name}}</h4>
-  <p class="list-group-item-text">{{star.id}}</p>
+  <div class="least-content">{{star.stargazers_count}} stars</div>
+  <p class="list-group-item-text">Language: {{star.language}}</p>
+  <a ng-href="{{star.html_url}}" class="list-group-item-text">{{star.url}}</a>
 </div>
